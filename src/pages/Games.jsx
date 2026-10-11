@@ -1,40 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PawPrint, HelpCircle, Zap, Brain, ArrowLeft } from 'lucide-react';
-import CritterCatch from '../games/CritterCatch.jsx';
-import TruthDare from '../games/TruthDare.jsx';
-import ReactionRush from '../games/ReactionRush.jsx';
-import MindReader from '../games/MindReader.jsx';
+import { Bike, Bird, Drum, ArrowLeft } from 'lucide-react';
+import BikeRush from '../games/BikeRush.jsx';
+import FlappyBird from '../games/FlappyBird.jsx';
+import DrumKit from '../games/DrumKit.jsx';
 import Masthead from '../components/Masthead.jsx';
 
 const GAMES = [
   {
-    id: 'critter',
-    icon: PawPrint,
-    title: 'Critter Catch',
-    teaser: 'Wild critters loose in the meadow. Catch ’em all for the Critterdex.',
-    comp: CritterCatch,
+    id: 'bikerush',
+    icon: Bike,
+    title: 'Bike Rush',
+    teaser: 'Dodge the traffic, hold BOOST, chase the distance record.',
+    comp: BikeRush,
   },
   {
-    id: 'truthdare',
-    icon: HelpCircle,
-    title: 'Truth & Dare',
-    teaser: 'The newsroom’s deck of gloriously silly cards. Pick your poison.',
-    comp: TruthDare,
+    id: 'flappy',
+    icon: Bird,
+    title: 'Flappy Bird',
+    teaser: 'The classic. Tap to flap, thread the pipes, don\u2019t kiss the ground.',
+    comp: FlappyBird,
   },
   {
-    id: 'reaction',
-    icon: Zap,
-    title: 'Reaction Rush',
-    teaser: '30 seconds. Targets everywhere. How fast are you, really?',
-    comp: ReactionRush,
-  },
-  {
-    id: 'mindreader',
-    icon: Brain,
-    title: 'AI Mind Reader',
-    teaser: 'Think of a number 1–50. The machine reads it out of your brain.',
-    comp: MindReader,
+    id: 'drums',
+    icon: Drum,
+    title: 'Drum Kit',
+    teaser: 'Six pads, real synthesized sound. Smash keys A\u2013H or tap away.',
+    comp: DrumKit,
   },
 ];
 
@@ -70,9 +62,9 @@ export default function Games() {
             <motion.div key="hub" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <h1 className="sr-only">Playable games by Vijay Varma</h1>
               <p className="text-center font-medium text-inksoft mt-8 max-w-xl mx-auto">
-                Every great newspaper has a puzzles page. Ours has four. No
-                pencils required — just a mouse, a finger, and mild
-                competitiveness.
+                Every great newspaper has a puzzles page. Ours has three —
+                built with canvas, physics, and real synthesized sound. No
+                pencils required — just a finger and mild competitiveness.
               </p>
 
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">

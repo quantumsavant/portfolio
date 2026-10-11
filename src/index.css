@@ -191,7 +191,7 @@ body {
   animation: marquee 26s linear infinite;
 }
 
-/* critter arena */
+/* dotted arena backdrop */
 .arena-dot {
   background-image: radial-gradient(rgba(34, 32, 26, 0.09) 1.5px, transparent 1.5px);
   background-size: 22px 22px;

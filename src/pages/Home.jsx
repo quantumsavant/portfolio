@@ -123,8 +123,8 @@ export default function Home() {
               },
               {
                 k: 'Leisure',
-                h: 'An arcade inside a portfolio — 4 playable games',
-                d: 'Critter Catch, Truth & Dare, Reaction Rush, AI Mind Reader.',
+                h: 'An arcade inside a portfolio — 3 playable games',
+                d: 'Bike Rush, Flappy Bird, Drum Kit.',
                 to: '/games',
               },
             ].map((s, i) => (
