@@ -56,6 +56,24 @@ const PROJECTS = [
     live: 'https://react-ui-card.vercel.app',
     repo: 'https://github.com/quantumsavant/react-ui-card-',
   },
+  {
+    section: 'Systems',
+    headline: 'CHIMERA — a fault-tolerant DAG workflow engine in pure Python',
+    img: '/screenshots/chimera.jpg',
+    caption: 'Exhibit D — crash-recoverable workflows, zero dependencies.',
+    alt: 'CHIMERA workflow engine code and test output',
+    problem: 'Multi-step jobs die silently: a crash mid-write corrupts state, a timed-out worker overwrites the retry’s result, two processes interleave corrupt records.',
+    features: [
+      'Zero dependencies — pure Python 3.11 standard library only',
+      'Event-sourced: every state change fsync-ed to a CRC32-framed append-only log',
+      'Crash recovery repairs half-written records; stale worker results fenced out',
+      '43/43 tests green, deterministic — no time.sleep anywhere in the suite',
+    ],
+    hood: 'Monotonic fencing tokens, 3-color DFS cycle detection, cross-process file locking. MIT licensed, docs + examples included.',
+    filed: ['Python', 'Systems Design', 'Event Sourcing'],
+    live: null,
+    repo: 'https://github.com/quantumsavant/chimera',
+  },
 ];
 
 export default function Projects() {
@@ -66,7 +84,7 @@ export default function Projects() {
       <main className="max-w-5xl mx-auto px-4 pb-16">
         <h1 className="sr-only">Projects by Vijay Varma — shipped and live</h1>
         <p className="text-center font-medium text-inksoft mt-8 max-w-xl mx-auto">
-          Three projects. Three screenshots. Every link below opens the real thing.
+          Four projects. Four screenshots. Every link below opens the real thing.
         </p>
 
         <div className="mt-10 grid gap-10 md:grid-cols-1">
@@ -118,14 +136,16 @@ export default function Projects() {
                     Filed under: {p.filed.join(' · ')}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <a
-                      href={p.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="btn-chunky bg-ink text-paper !py-3 !px-5 text-[16px]"
-                    >
-                      <ExternalLink size={17} strokeWidth={2.75} /> Live demo
-                    </a>
+                    {p.live && (
+                      <a
+                        href={p.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn-chunky bg-ink text-paper !py-3 !px-5 text-[16px]"
+                      >
+                        <ExternalLink size={17} strokeWidth={2.75} /> Live demo
+                      </a>
+                    )}
                     <a
                       href={p.repo}
                       target="_blank"
