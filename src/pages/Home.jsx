@@ -116,9 +116,9 @@ export default function Home() {
                 to: '/projects',
               },
               {
-                k: 'Craft',
-                h: 'React UI Card — a profile card built the React way',
-                d: 'Components, props, clean CSS. Responsive and hover-polished.',
+                k: 'Cinema',
+                h: 'FRAME — discover, compare, and collect films',
+                d: 'Movie discovery, side-by-side comparison, personal cinema library. React + Vite.',
                 to: '/projects',
               },
               {

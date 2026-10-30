@@ -6,27 +6,45 @@ import { GithubIcon } from '../components/decor.jsx';
 
 const PROJECTS = [
   {
-    section: 'World Cup Special',
-    headline: 'AI Stadium Guide — World Cup assistant powered by React + Gemini',
-    img: '/screenshots/stadium-guide.jpg',
-    caption: 'Exhibit A — the stadium guide, live and taking questions.',
-    alt: 'AI Stadium Guide live demo screenshot',
-    problem: 'Stadium visitors can’t find gates, food, washrooms, or help — static maps fail during live events.',
+    section: 'Systems',
+    headline: 'CHIMERA — a fault-tolerant DAG workflow engine in pure Python',
+    img: '/screenshots/chimera.jpg',
+    caption: 'Exhibit A — crash-recoverable workflows, zero dependencies.',
+    alt: 'CHIMERA workflow engine code and test output',
+    problem: 'Multi-step jobs die silently: a crash mid-write corrupts state, a timed-out worker overwrites the retry’s result, two processes interleave corrupt records.',
     features: [
-      'Ask in plain words — “Where is Gate B?” “Nearest washroom?” — and get answers',
-      'Gate & section finder, food recommendations, parking guidance, emergency help',
-      'Multilingual assistance and accessibility info for visitors',
+      'Zero dependencies — pure Python 3.11 standard library only',
+      'Event-sourced: every state change fsync-ed to a CRC32-framed append-only log',
+      'Crash recovery repairs half-written records; stale worker results fenced out',
+      '69 adversarial tests green, deterministic — no time.sleep anywhere in the suite',
     ],
-    hood: 'React 19 + Vite. Google Gemini AI answers questions, with local stadium data as a fast fallback.',
-    filed: ['React', 'Vite', 'Google Gemini AI'],
-    live: 'https://ai-stadium-guide.vercel.app',
-    repo: 'https://github.com/quantumsavant/AI-Stadium-Guide',
+    hood: 'Monotonic fencing tokens, 3-color DFS cycle detection, cross-process file locking. MIT licensed, docs + examples included.',
+    filed: ['Python', 'Systems Design', 'Event Sourcing'],
+    live: null,
+    repo: 'https://github.com/quantumsavant/chimera',
+  },
+  {
+    section: 'Cinema',
+    headline: 'FRAME — discover, compare, and collect films',
+    img: '/screenshots/frame.jpg',
+    caption: 'Exhibit B — discover, compare, collect.',
+    alt: 'FRAME movie discovery app screenshot',
+    problem: 'Finding a film to watch means endless scrolling — comparing films side by side and keeping a personal library takes even more tabs.',
+    features: [
+      'Real-time search with a debounced custom hook, plus genre browsing and filter/sort',
+      'Side-by-side comparison studio for up to three films',
+      'Personal cinema library — watchlist, watched, custom collections, ratings, and notes',
+    ],
+    hood: 'React 19 + Vite. Discovery feed, comparison studio, and personal library in one responsive dark interface.',
+    filed: ['React', 'Vite', 'JavaScript (ES6+)'],
+    live: 'https://frame-kappa-six.vercel.app/',
+    repo: 'https://github.com/quantumsavant/FRAME',
   },
   {
     section: 'Technology',
     headline: 'GitHub Profile Explorer — live GitHub data, zero mock data',
     img: '/screenshots/github-explorer.png',
-    caption: 'Exhibit B — real API data on screen. Nothing mocked.',
+    caption: 'Exhibit C — real API data on screen. Nothing mocked.',
     alt: 'GitHub Profile Explorer live demo screenshot',
     problem: 'GitHub profiles are scattered across tabs — repos, stats, and activity are hard to scan at a glance.',
     features: [
@@ -39,41 +57,6 @@ const PROJECTS = [
     live: 'https://github-profile-explorer-ruddy.vercel.app',
     repo: 'https://github.com/quantumsavant/github-profile-explorer',
   },
-  {
-    section: 'Craft',
-    headline: 'React UI Card — a profile card built the React way',
-    img: '/screenshots/react-ui-card.jpg',
-    caption: 'Exhibit C — a card, done properly.',
-    alt: 'React UI Card live demo screenshot',
-    problem: 'Profile cards get messy fast when data, layout, and styles tangle together.',
-    features: [
-      'Clean, responsive profile cards with hover-polished interactions',
-      'Component-based architecture — each piece reusable on its own',
-      'Props-driven rendering with dynamic data via array mapping',
-    ],
-    hood: 'Built the way the React docs intend: components, props, and mapped data. Responsive CSS throughout.',
-    filed: ['React.js', 'CSS3'],
-    live: 'https://react-ui-card.vercel.app',
-    repo: 'https://github.com/quantumsavant/react-ui-card-',
-  },
-  {
-    section: 'Systems',
-    headline: 'CHIMERA — a fault-tolerant DAG workflow engine in pure Python',
-    img: '/screenshots/chimera.jpg',
-    caption: 'Exhibit D — crash-recoverable workflows, zero dependencies.',
-    alt: 'CHIMERA workflow engine code and test output',
-    problem: 'Multi-step jobs die silently: a crash mid-write corrupts state, a timed-out worker overwrites the retry’s result, two processes interleave corrupt records.',
-    features: [
-      'Zero dependencies — pure Python 3.11 standard library only',
-      'Event-sourced: every state change fsync-ed to a CRC32-framed append-only log',
-      'Crash recovery repairs half-written records; stale worker results fenced out',
-      '43/43 tests green, deterministic — no time.sleep anywhere in the suite',
-    ],
-    hood: 'Monotonic fencing tokens, 3-color DFS cycle detection, cross-process file locking. MIT licensed, docs + examples included.',
-    filed: ['Python', 'Systems Design', 'Event Sourcing'],
-    live: null,
-    repo: 'https://github.com/quantumsavant/chimera',
-  },
 ];
 
 export default function Projects() {
@@ -84,7 +67,7 @@ export default function Projects() {
       <main className="max-w-5xl mx-auto px-4 pb-16">
         <h1 className="sr-only">Projects by Vijay Varma — shipped and live</h1>
         <p className="text-center font-medium text-inksoft mt-8 max-w-xl mx-auto">
-          Four projects. Four screenshots. Every link below opens the real thing.
+          Three projects. Three screenshots. Every link below opens the real thing.
         </p>
 
         <div className="mt-10 grid gap-10 md:grid-cols-1">
