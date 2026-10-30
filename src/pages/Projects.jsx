@@ -57,6 +57,23 @@ const PROJECTS = [
     live: 'https://github-profile-explorer-ruddy.vercel.app',
     repo: 'https://github.com/quantumsavant/github-profile-explorer',
   },
+  {
+    section: 'Craft',
+    headline: 'React UI Card — a profile card built the React way',
+    img: '/screenshots/react-ui-card.jpg',
+    caption: 'Exhibit D — a card, done properly.',
+    alt: 'React UI Card live demo screenshot',
+    problem: 'Profile cards get messy fast when data, layout, and styles tangle together.',
+    features: [
+      'Clean, responsive profile cards with hover-polished interactions',
+      'Component-based architecture — each piece reusable on its own',
+      'Props-driven rendering with dynamic data via array mapping',
+    ],
+    hood: 'Built the way the React docs intend: components, props, and mapped data. Responsive CSS throughout.',
+    filed: ['React.js', 'CSS3'],
+    live: 'https://react-ui-card.vercel.app',
+    repo: 'https://github.com/quantumsavant/react-ui-card-',
+  },
 ];
 
 export default function Projects() {
@@ -67,7 +84,7 @@ export default function Projects() {
       <main className="max-w-5xl mx-auto px-4 pb-16">
         <h1 className="sr-only">Projects by Vijay Varma — shipped and live</h1>
         <p className="text-center font-medium text-inksoft mt-8 max-w-xl mx-auto">
-          Three projects. Three screenshots. Every link below opens the real thing.
+          Four projects. Four screenshots. Every link below opens the real thing.
         </p>
 
         <div className="mt-10 grid gap-10 md:grid-cols-1">

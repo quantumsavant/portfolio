@@ -31,7 +31,7 @@ export default function Home() {
           >
             <p className="dateline text-coral">★ Exclusive ★ Lucknow, Oct 2026</p>
             <h1 className="font-masthead font-black text-4xl sm:text-6xl leading-[1.02] mt-3 tracking-tight">
-              AI Stadium Guide — World Cup assistant powered by React + Gemini
+              CHIMERA — a fault-tolerant DAG workflow engine in pure Python
             </h1>
             <p className="font-hand text-2xl text-inksoft mt-3 -rotate-1">
               "I just kept building until it was live." — the developer, probably
@@ -40,9 +40,10 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 gap-5 text-[17px] leading-relaxed font-medium text-ink/90">
               <p>
                 <span className="font-masthead font-black text-5xl float-left mr-2 leading-[0.85] mt-1">V</span>
-                ijay Varma, a frontend developer from Lucknow, shipped it for
-                the FIFA World Cup 2026 — tickets, seats, food delivery,
-                booking. React, Vite, Google Gemini AI.
+                ijay Varma, a frontend developer from Lucknow, built it with
+                zero dependencies — pure Python standard library, event-sourced
+                persistence, crash recovery, and fencing tokens. 69 adversarial
+                tests green, MIT open source.
               </p>
               <p>
                 The latest in a run of real, deployed products — all live,
